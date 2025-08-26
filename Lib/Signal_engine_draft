@@ -1,0 +1,13 @@
+import 'dart:math';
+
+class SignalEngine {
+  static Future<String> getSignal() async {
+    await Future.delayed(const Duration(seconds: 2));
+    final rand = Random().nextInt(100);
+    if (rand % 2 == 0) {
+      return "📈 BUY Signal";
+    } else {
+      return "📉 SELL Signal";
+    }
+  }
+}
